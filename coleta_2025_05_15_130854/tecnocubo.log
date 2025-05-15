@@ -1,0 +1,35 @@
+15/05/2025 13:08:54 - INFO - <module> - ==== Iniciando coleta ====
+15/05/2025 13:08:57 - INFO - <module> - Coletando produto: https://www.tecnocubo.com.br/impressoras/bambu-lab/impressora-3d-bambu-lab-x1-carbon-combo
+15/05/2025 13:09:10 - DEBUG - fechar_popups - Pop-up fechado: .vue-modal-close
+15/05/2025 13:09:24 - WARNING - <module> - ⚠️ Preço original não encontrado. Produto pode não ter desconto.
+15/05/2025 13:09:24 - DEBUG - adicionar_ao_carrinho - 🔍 Procurando botão de compra...
+15/05/2025 13:09:25 - INFO - adicionar_ao_carrinho - ✅ Produto adicionado ao carrinho
+15/05/2025 13:09:27 - INFO - adicionar_ao_carrinho - 🖼️ Print do modal do carrinho salva com sucesso
+15/05/2025 13:09:29 - DEBUG - navegar_para_carrinho - Navegando para o carrinho: https://www.tecnocubo.com.br/checkout/cart
+15/05/2025 13:09:44 - ERROR - navegar_para_carrinho - ❌ Falha ao navegar para o carrinho: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00C8FC83+61635]
+	GetHandleVerifier [0x00C8FCC4+61700]
+	(No symbol) [0x00AB05D3]
+	(No symbol) [0x00AF899E]
+	(No symbol) [0x00AF8D3B]
+	(No symbol) [0x00B40E12]
+	(No symbol) [0x00B1D2E4]
+	(No symbol) [0x00B3E61B]
+	(No symbol) [0x00B1D096]
+	(No symbol) [0x00AEC840]
+	(No symbol) [0x00AED6A4]
+	GetHandleVerifier [0x00F145A3+2701795]
+	GetHandleVerifier [0x00F0FD26+2683238]
+	GetHandleVerifier [0x00F2AA6E+2793134]
+	GetHandleVerifier [0x00CA6945+155013]
+	GetHandleVerifier [0x00CAD02D+181357]
+	GetHandleVerifier [0x00C974D8+92440]
+	GetHandleVerifier [0x00C97680+92864]
+	GetHandleVerifier [0x00C82070+5296]
+	BaseThreadInitThunk [0x75F77BA9+25]
+	RtlInitializeExceptionChain [0x774CC28B+107]
+	RtlClearBits [0x774CC20F+191]
+
+15/05/2025 13:09:44 - INFO - <module> - ✅ 1 item(ns) coletado(s) com sucesso
+15/05/2025 13:09:47 - INFO - <module> - ==== Coleta finalizada ====

@@ -12,6 +12,9 @@ from selenium.webdriver.common.action_chains import ActionChains
 from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 
+# Suprimir mensagens técnicas de bibliotecas (como TensorFlow/XNNPACK)
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 current_date = datetime.now().strftime("%Y_%m_%d")
 current_time = datetime.now().strftime("%H%M%S")
@@ -110,7 +113,8 @@ def adicionar_ao_carrinho(driver, nr_seq_insinf):
         return True
 
     except Exception as e:
-        logger.error(f"❌ Erro ao adicionar ao carrinho: {e}")
+        logger.error("❌ Erro ao adicionar ao carrinho", exc_info=False)
+        logger.debug(f"Detalhes técnicos: {str(e)}", exc_info=True)
         return False
 
 def navegar_para_carrinho(driver, nr_seq_insinf):
@@ -126,7 +130,8 @@ def navegar_para_carrinho(driver, nr_seq_insinf):
         produto_no_carrinho.screenshot(f"{COLLECTION_DIR}/prints/carrinho_{nr_seq_insinf}.png")
         logger.debug("Print do carrinho salva")
     except Exception as e:
-        logger.error(f"❌ Falha ao navegar para o carrinho: {str(e)}")
+        logger.error("❌ Falha ao navegar para o carrinho", exc_info=False)
+        logger.debug(f"Detalhes técnicos: {str(e)}", exc_info=True)
 
 try:
     logger.info("==== Iniciando coleta ====")
@@ -189,13 +194,15 @@ try:
                     navegar_para_carrinho(driver, item['NR_SEQ_INSINF'])
 
             except Exception as e:
-                logger.error(f"Erro na coleta: {str(e)}")
+                logger.error("Erro na coleta", exc_info=False)
+                logger.debug(f"Detalhes técnicos: {str(e)}", exc_info=True)
                 with open(f"{COLLECTION_DIR}/prints/html_debug_{item['NR_SEQ_INSINF']}.html", "w", encoding="utf-8") as f:
                     f.write(driver.page_source)
                 continue
 
         except Exception as e:
-            logger.error(f"Erro no processamento: {str(e)}")
+            logger.error("Erro no processamento", exc_info=False)
+            logger.debug(f"Detalhes técnicos: {str(e)}", exc_info=True)
             continue
 
     try:
@@ -209,10 +216,12 @@ try:
     except ImportError:
         logger.critical("❌ Biblioteca openpyxl não instalada. Instale com 'pip install openpyxl' para salvar Excel.")
     except Exception as e:
-        logger.error(f"❌ Erro ao salvar Excel: {e}")
+        logger.error("❌ Erro ao salvar Excel", exc_info=False)
+        logger.debug(f"Detalhes técnicos: {str(e)}", exc_info=True)
 
 except Exception as e:
-    logger.critical(f"❌ ERRO GLOBAL: {str(e)}")
+    logger.critical("❌ ERRO GLOBAL", exc_info=False)
+    logger.debug(f"Detalhes técnicos: {str(e)}", exc_info=True)
 
 finally:
     if 'driver' in locals():

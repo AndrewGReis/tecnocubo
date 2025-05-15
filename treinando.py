@@ -138,8 +138,10 @@ try:
     options = webdriver.ChromeOptions()
     options.add_argument("--start-maximized")
     options.add_argument("--disable-notifications")
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-
+    driver = webdriver.Chrome(options=options)
+    #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+#/\ essa linha pode ser substituída por essa     driver = webdriver.Chrome(options=options)
+# sem prejuízo ao código
     resultados = []
 
     for item in urls:

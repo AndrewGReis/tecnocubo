@@ -12,7 +12,6 @@ from selenium.webdriver.common.action_chains import ActionChains
 from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 
-# Suprimir mensagens técnicas de bibliotecas (como TensorFlow/XNNPACK)
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

@@ -121,7 +121,7 @@ def navegar_para_carrinho(driver, nr_seq_insinf):
         url_carrinho = "https://www.tecnocubo.com.br/checkout/cart"
         driver.get(url_carrinho)
         logger.debug(f"Navegando para o carrinho: {url_carrinho}")
-        time.sleep(5)
+        time.sleep(3)
 
         produto_no_carrinho = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, "div.cart-item"))

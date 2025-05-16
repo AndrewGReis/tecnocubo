@@ -1,0 +1,63 @@
+16/05/2025 12:26:08 - INFO - start_requests - ==== Iniciando coleta ====
+16/05/2025 12:26:08 - INFO - parse_product - Coletando produto: https://www.tecnocubo.com.br/impressoras/bambu-lab/impressora-3d-bambu-lab-x1-carbon-combo
+16/05/2025 12:26:21 - DEBUG - close_popups - Pop-up fechado: .vue-modal-close
+16/05/2025 12:26:34 - WARNING - parse_product - ⚠️ Preço original não encontrado. Produto pode não ter desconto.
+16/05/2025 12:26:34 - DEBUG - add_to_cart - 🔍 Procurando botão de compra...
+16/05/2025 12:26:35 - INFO - add_to_cart - ✅ Produto adicionado ao carrinho
+16/05/2025 12:26:37 - INFO - add_to_cart - 🖼️ Print do modal do carrinho salva com sucesso
+16/05/2025 12:26:39 - DEBUG - navigate_cart - Navegando para o carrinho: https://www.tecnocubo.com.br/checkout/cart
+16/05/2025 12:26:52 - ERROR - navigate_cart - ❌ Falha ao navegar para o carrinho
+16/05/2025 12:26:52 - DEBUG - navigate_cart - Detalhes técnicos: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7429DCF65+75717]
+	GetHandleVerifier [0x00007FF7429DCFC0+75808]
+	(No symbol) [0x00007FF7427A8F9A]
+	(No symbol) [0x00007FF7427FF4C6]
+	(No symbol) [0x00007FF7427FF77C]
+	(No symbol) [0x00007FF742852577]
+	(No symbol) [0x00007FF7428273BF]
+	(No symbol) [0x00007FF74284F39C]
+	(No symbol) [0x00007FF742827153]
+	(No symbol) [0x00007FF7427F0421]
+	(No symbol) [0x00007FF7427F11B3]
+	GetHandleVerifier [0x00007FF742CDD74D+3223469]
+	GetHandleVerifier [0x00007FF742CD7CF2+3200338]
+	GetHandleVerifier [0x00007FF742CF5B23+3322755]
+	GetHandleVerifier [0x00007FF7429F6A3A+180890]
+	GetHandleVerifier [0x00007FF7429FE13F+211359]
+	GetHandleVerifier [0x00007FF7429E52B4+109332]
+	GetHandleVerifier [0x00007FF7429E5462+109762]
+	GetHandleVerifier [0x00007FF7429CBA79+4825]
+	BaseThreadInitThunk [0x00007FFC601F259D+29]
+	RtlUserThreadStart [0x00007FFC61C8AF38+40]
+Traceback (most recent call last):
+  File "c:\Users\andrew.reis\Documents\projetos\Web\treinando.py", line 149, in navigate_cart
+    produto_no_carrinho = WebDriverWait(self.driver, 10).until(
+  File "c:\Users\andrew.reis\Documents\projetos\Web\venv\lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7429DCF65+75717]
+	GetHandleVerifier [0x00007FF7429DCFC0+75808]
+	(No symbol) [0x00007FF7427A8F9A]
+	(No symbol) [0x00007FF7427FF4C6]
+	(No symbol) [0x00007FF7427FF77C]
+	(No symbol) [0x00007FF742852577]
+	(No symbol) [0x00007FF7428273BF]
+	(No symbol) [0x00007FF74284F39C]
+	(No symbol) [0x00007FF742827153]
+	(No symbol) [0x00007FF7427F0421]
+	(No symbol) [0x00007FF7427F11B3]
+	GetHandleVerifier [0x00007FF742CDD74D+3223469]
+	GetHandleVerifier [0x00007FF742CD7CF2+3200338]
+	GetHandleVerifier [0x00007FF742CF5B23+3322755]
+	GetHandleVerifier [0x00007FF7429F6A3A+180890]
+	GetHandleVerifier [0x00007FF7429FE13F+211359]
+	GetHandleVerifier [0x00007FF7429E52B4+109332]
+	GetHandleVerifier [0x00007FF7429E5462+109762]
+	GetHandleVerifier [0x00007FF7429CBA79+4825]
+	BaseThreadInitThunk [0x00007FFC601F259D+29]
+	RtlUserThreadStart [0x00007FFC61C8AF38+40]
+
+16/05/2025 12:26:52 - INFO - save_results - ✅ 1 item(ns) coletado(s) com sucesso
+16/05/2025 12:26:55 - INFO - close_spider - ==== Coleta finalizada ====
